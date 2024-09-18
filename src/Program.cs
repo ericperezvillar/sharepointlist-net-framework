@@ -27,7 +27,7 @@ namespace ListViewSharepoint
             string sharePointListName = ConfigurationManager.AppSettings["SharePoint:ListName"];
 
             // Initialize services
-            DatabaseService databaseService = new DatabaseService(sqlConnectionString);
+            DataAccessRepository databaseService = new DataAccessRepository(sqlConnectionString);
             SharePointService sharePointService = new SharePointService(sharePointSiteUrl, sharePointUsername, sharePointPassword);
 
 

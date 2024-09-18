@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace ListViewSharepoint.Access
 {
-    public class DatabaseService
+    public class DataAccessRepository
     {
         private readonly string _connectionString;
         private ILogger _logger;
 
-        public DatabaseService(string connectionString)
+        public DataAccessRepository(string connectionString)
         {
             _connectionString = connectionString;
-            _logger = Log.ForContext<DatabaseService>();
+            _logger = Log.ForContext<DataAccessRepository>();
         }
 
         public async Task<List<TaskInfo>> GetTaskInfoAsync()
